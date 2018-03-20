@@ -1,0 +1,17 @@
+{
+  "name": "react-native-navigation-actions",
+  "version": "1.0.2",
+  "description": "This library offer nice abstractions and flexibility around react-navigation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "native",
+    "navigation",
+    "actions"
+  ],
+  "author": "Pedro de Goes <pedro.goes@gmail.com>",
+  "license": "ISC"
+}
