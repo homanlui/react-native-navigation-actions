@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
-import { StackNavigator, NavigationActions } from 'react-navigation'
+import { createAppContainer, NavigationActions } from 'react-navigation'
+import { createStackNavigator } from 'react-navigation-stack'
 
 // API Reference:
 // https://reactnavigation.org/docs/navigation-actions.html
@@ -15,7 +16,7 @@ function setTopLevelNavigator(navRef) {
 }
 
 const AppNavigator = (RootNavigator) => {
-  const TopLevelNavigator = StackNavigator({
+  const TopLevelNavigator = createAppContainer(createStackNavigator({
     __root__: { screen: RootNavigator },
   }, {
     headerMode: 'none',
@@ -24,11 +25,11 @@ const AppNavigator = (RootNavigator) => {
     }
   });
 
-  return (props) => { 
+  return (props) => {
     return (
       <TopLevelNavigator {...props} ref={navRef => {setTopLevelNavigator(navRef)}} />
-    ); 
-  } 
+    );
+  }
 };
 
 const Actions = {
