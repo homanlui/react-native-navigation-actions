@@ -21,7 +21,7 @@ const AppNavigator = (RootNavigator) => {
   }, {
     headerMode: 'none',
     navigationOptions: {
-      headerVisible: false,
+      headerVisible: false
     }
   });
 
